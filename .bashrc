@@ -27,7 +27,7 @@
 #####################################################################
 
 # Allow the shell to perform brace expansion - on by default.
-# set -o braceexpand;#
+# set -o braceexpand;
 
 # Locate and remember hash commands as they are 
 # looked up for execution -- on by default.
