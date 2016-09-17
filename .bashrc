@@ -26,24 +26,121 @@
 #####################################################################
 
 # Allow the shell to perform brace expansion - on by default.
-set -o braceexpand
+set -o braceexpand;
 
 # Locate and remember hash commands as they are 
 # looked up for execution -- on by default.
-set -o hashall
+set -o hashall;
 
 # Enable history substitution -- on by default.
-set -o histexpand
+set -o histexpand;
 
 # Enable command history -- on by default.
-set -o history
+set -o history;
 
 # Do not exit an interactive shell upon reading EOF.
-set -o ignoreeof
+set -o ignoreeof;
 
 # Report the status of terminated background jobs immediately, 
 # rather than before printing the next primary prompt.
-set -o notify
+set -o notify;
+
+
+#####################################################################
+# @section Change Shell Behavior
+#
+#   Enable and disable various options via the shopt builtin. By
+#   default *most* of these options are disabled (turned off).
+#####################################################################
+
+# Executed a directory name as if it were an argument to cd.
+shopt -s autocd;
+
+# Correct spelling errors in directory names given to cd.
+shopt -s cdspell;
+
+# Check the hash table for a command name before searching $PATH.
+shopt -s checkhash;
+
+# Check the window size (update $LINES and $COLUMNS) 
+# after each command.
+shopt -s checkwinsize;
+
+# Save all lines of a multi-line command in the same history entry.
+shopt -s cmdhist;
+
+# Correct spelling errors on directory names during word completion
+# if the directory name initially supplied does not exist.
+shopt -s dirspell;
+
+# Expand aliases -- on by default
+shopt -s expand_aliases;
+
+# Enable extended pattern matching features.
+shopt -s extglob;
+
+# Perform quoting within ${parameter} expansion -- on by default.
+shopt -s extquote;
+
+# Ignore suffixes specified by $FIGNORE when performing word
+# completion -- on by default.
+shopt -s force_fignore;
+
+# Enable `**` pattern in filename expansion to match all files,
+# directories and subdirectories.
+shopt -s globstar;
+
+# Append the history list to $HISTFILE instead of replacing it.
+shopt -s histappend;
+
+# Perform hostname completion -- on by default.
+shopt -s hostcomplete;
+
+# Allow comments in an interactive shell -- on by default.
+shopt -s interactive_comments;
+
+# Save multi-line commands to the history with embedded newlines
+# instead of semicolons -- requries cmdhist to be on.
+shopt -s lithist;
+
+# Do not attempt completions on an empty line.
+shopt -s no_empty_cmd_completion;
+
+# Case-insensitive filename matching in filename expansion.
+shopt -s nocaseglob;
+
+# Enable programmable completion -- on by default.
+shopt -s progcomp;
+
+# Perform parameter expansion, command substitution, arithmetic
+# expansion, and quote removal on prompt strings -- on by default.
+shopt -s promptvars;
+
+# Allow the source builtin to use $PATH -- on by default.
+shopt -s sourcepath;
+
+# Make echo builtin expand backslash-escape-sequence.
+shopt -s xpg_echo;
+
+
+#####################################################################
+# @section Variables
+#
+#   Set variables used by bash.
+#####################################################################
+
+# Set the $PATH -- favor /usr/local/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+# Set TextMate to be the default editor
+export EDITOR='mate';
+
+# Ignore files with these suffixes when performing completion.
+export FIGNORE='.o:.pyc'
+
+# Prefer US English and use UTF-8.
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
 
 
 #####################################################################
