@@ -138,9 +138,31 @@ export EDITOR='mate';
 # Ignore files with these suffixes when performing completion.
 export FIGNORE='.o:.pyc'
 
+# Ignore files that match these patterns when 
+# performing filename expansion.
+export GLOBIGNORE='.DS_Store:*.o:*.pyc'
+
+# History file control:
+#   - ignorespace = don't save lines that begin with a space
+#   - ignoredups  = don't save duplicate lines
+export HISTCONTROL='ignorespace:ignoredups'
+
+# Maximum number of lines/commands to save in the history file.
+export HISTFILESIZE=5000
+export HISTSIZE=5000
+
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
+
+
+#####################################################################
+# @section Prompt
+#####################################################################
+
+# The number of trailing directory components to retain when adding
+# the directory names to the prompt.
+export PROMPT_DIRTRIM=4
 
 
 #####################################################################
