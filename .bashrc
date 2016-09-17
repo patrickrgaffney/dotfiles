@@ -190,6 +190,3 @@ alias ...="cd ../../"
 
 # Open current directory in Finder.app.
 alias finder="open -a Finder ./"
-
-# Set trash (verbose) to override rm.
-alias rm="trash -v"
