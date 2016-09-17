@@ -18,12 +18,18 @@
 # Clear the screen.
 alias k="clear"
 
-# List {a}ll files with {h}uman-{s}ize output long
+# List {a}ll files with {h}uman-{s}ize output long.
 alias lsl="ls -AghsG"
 
-# List files
+# List files.
 alias ll="ls -lhGF"
 
-# Go back x director(y|ies)
+# Go back x director(y|ies).
 alias ..="cd ../"
 alias ...="cd ../../"
+
+# Open current directory in Finder.app.
+alias finder="open -a Finder ./"
+
+# Set trash (verbose) to override rm.
+alias rm="trash -v"
