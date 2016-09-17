@@ -1,0 +1,228 @@
+#####
+# ~/.inputrc -- startup file for readline
+#
+#   @author     Pat Gaffney <pat@hypepat.com>
+#   @created    2016-09-17
+#   @modified   2016-09-17
+#
+#   This file is loaded by the Readline library. It sets defaults
+#   for variable settings, key bindings, and behavior.
+#
+#####################################################################
+
+#####################################################################
+# @section Run-Time Behavior
+#####################################################################
+
+# Use a visible bell instead of an audible one.
+# - OPTIONS: visible, none, audible
+# - DEFAULT: audible
+set bell-style visible
+
+# Bind control characters to their Readline equivalents.
+# - OPTIONS: on, off
+# - DEFAULT: on
+set bind-tty-special-chars on
+
+# Display possible completions using different colors to indicate
+# their file type. Color definitions are taken from the value of
+# $LS_COLORS environment variable.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set colored-stats on
+
+# String to insert at the beginning of the line when 
+# `insert-comment` command is executed.
+# - OPTIONS: any valid string
+# - DEFAULT: "#"
+set comment-begin "#"
+
+# Number of screen columns used to display possible matches when
+# performing completion. The value is ignored if it is less than 0
+# or greater than the terminal screen width.
+# - OPTIONS: any valid signed integer
+# - DEFAULT: -1
+set completion-display-width -1
+
+# Perform case-insensitive filename matching and completion.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set completion-ignore-case on
+
+# Treat hypens `-` and underscores `_` as equivalent when performing
+# case-insensitive filename matching and completion.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set completion-map-case off
+
+# Length in characters of the common prefix of a list of possible
+# completions that is displayed without modification. When set to a 
+# value greater than 0, common prefixes longer than this value are 
+# replaced with an ellipsis.
+# - OPTIONS: any valid signed integer
+# - DEFAULT: -1
+set completions-prefix-display-length -1
+
+# Number of possible completions that determines when the user is 
+# asked to display the entire list of possibilities.
+# - OPTIONS: any valid signed integer
+# - DEFAULT: 100
+set completion-query-items 20
+
+# Convert characters with the eigth bit set to an ASCII key sequence 
+# by stripping the eigth big and prefixing an `ESC` character, 
+# converting them to a meta-prefixed key sequence
+# - OPTIONS: on, off
+# - DEFAULT: one
+set convert-meta on
+
+# Disable word completion
+# - OPTIONS: on, off
+# - DEFAULT: off
+set disable-completion off
+
+# Controls which default key bindings to use.
+# - OPTIONS: emacs, vi
+# - DEFAULT: emacs
+set editing-mode emacs
+
+# Echo a character corresponding to a signal generated 
+# by the keyboard.
+# - OPTIONS: on, off
+# - DEFAULT: on
+set echo-control-characters off
+
+# Enable the application keypad when it is called.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set enable-keypad off
+
+# Enable any meta modifier key the terminal claims to support.
+# - OPTIONS: on, off
+# - DEFAULT: on
+set enable-meta-key on
+
+# Perform tilde expansion when Readline attempts word completion.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set expand-tilde off
+
+# Place the current cursor position at the same location on each
+# history line retrieved with `previous-history` or `next-history`.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set history-preserve-point off
+
+# Set the maximum number of history entries saved in history list.
+# - OPTIONS: any valid signed integer
+# - DEFAULT: 500
+set history-size 5000
+
+# Scroll the current line of text being edited horizontally.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set horizontal-scroll-mode off
+
+# Enable eight-bit input.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set input-meta off
+
+# The string of characters that should terminate an incremental 
+# search without subsequently executing the character as a command.
+# - OPTIONS: no value or a keystroke
+# - DEFAULT: no value
+# set isearch-terminators 
+
+# Set the current keymap for key binding commands.
+# - OPTIONS: emacs, emacs-meta, emacs-ctlx, vi, vi-move, vi-insert
+# - DEFAULT: emacs
+set keymap emacs
+
+# Specify a duration to wait for a character when reading an 
+# ambiguous key sequence.
+# - OPTIONS: time in milliseconds
+# - DEFAULT: 500
+set keyseq-timeout 500
+
+# Completed directory names have a slash appended.
+# - OPTIONS: on, off
+# - DEFAULT: on
+set mark-directories on
+
+# Mark history lines that have been modified.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set mark-modified-lines off
+
+# Completed name which are symbolic links have a slash appended.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set mark-symlinked-directories off
+
+# Match files whose names begin with a `.` (hidden files).
+# - OPTIONS: on, off
+# - DEFAULT: on
+set match-hidden-files on
+
+# Menu completion displays the common prefix of all possible 
+# completions before cycling through a list.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set menu-complete-display-prefix off
+
+# Display character with the eighth-bit set directly rather than
+# as a meta-prefixed escape sequence.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set output-meta off
+
+# Use an internal `more`-like pager to display a screenful of 
+# possible completions at a time.
+# - OPTIONS: on, off
+# - DEFAULT: on
+set page-completions on
+
+# Display completions with matches sorted horizontally in 
+# alphabetical order, rather than down a screen.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set print-completions-horizontally off
+
+# Undo all changes to history lines before returning when
+# `accept-line` is executed.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set revert-all-at-newline off
+
+# Words which have more than one possible completion cause the
+# matches to be listed immediately instead of ringing the bell.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set show-all-if-ambiguous on
+
+# Words which have more than one possible completion without any
+# possible partial completion cause the matches to be listed
+# immediately instead of ringing the bell.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set show-all-if-unmodified on
+
+# Add a character to the beginning of the prompt indicating the
+# editing mode: `@` for emacs, `:` for vi, `+` for vi-insertion.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set show-mode-in-prompt off
+
+# Do not insert characters from the completion that match characters
+# after point in the word being completed, so portions of the word
+# following the cursor are not duplicated.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set skip-completed-text off
+
+# A character denoting a file's type is appending to the filename
+# when listing possible completions.
+# - OPTIONS: on, off
+# - DEFAULT: off
+set visible-stats off
