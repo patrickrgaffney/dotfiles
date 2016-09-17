@@ -9,6 +9,7 @@
 #   that is *not* a login shell. Because of this behavior, this
 #   file is loaded by ~./bash_profile -- effectively making it the
 #   startup file for both login and non-login interactive shells.
+#
 #####################################################################
 
 #####################################################################
@@ -26,17 +27,17 @@
 #####################################################################
 
 # Allow the shell to perform brace expansion - on by default.
-set -o braceexpand;
+# set -o braceexpand;#
 
 # Locate and remember hash commands as they are 
 # looked up for execution -- on by default.
-set -o hashall;
+# set -o hashall;
 
 # Enable history substitution -- on by default.
-set -o histexpand;
+# set -o histexpand;
 
 # Enable command history -- on by default.
-set -o history;
+# set -o history;
 
 # Do not exit an interactive shell upon reading EOF.
 set -o ignoreeof;
