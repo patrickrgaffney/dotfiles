@@ -14,8 +14,6 @@
 # ln -s :: create symbolic link
 # ln -v :: verbose mode- print details
 
-regex='([\.]\w*)'
-
 # Create a symlink for each file in this directory.
 for file in $(ls -A)
 do
@@ -24,6 +22,12 @@ do
         continue;
     elif [[ -x $file ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is an executable\n" $file
+        continue;
+    elif [[ $file == *.png ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is a picture\n" $file
+        continue;
+    elif [[ $file == *.md ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is a Markdown file\n" $file
         continue;
     else ln -sv "$PWD/$file" "$HOME";
     fi
