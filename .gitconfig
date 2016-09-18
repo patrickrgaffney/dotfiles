@@ -1,0 +1,40 @@
+#####
+# ~/.gitconfig -- user git configuration file
+#
+#   @author     Pat Gaffney <pat@hypepat.com>
+#   @created    2016-09-17
+#   @modified   2016-09-17
+#
+#   The presence of this file overrides the system (--system) 
+#   defaults, located in /etc/gitconfig. The settings in this file
+#   can be overwritten on a project level by adding configurations
+#   to the .git/config file in a repository.
+#
+#####################################################################
+
+[user] 
+name = Pat Gaffney
+email = pat@hypepat.com
+
+[alias]
+st = status
+co = checkout
+br = branch
+up = rebase
+cm = commit
+last = log -1 HEAD
+hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[core]
+# Set TextMate to be the default editor.
+#   --wait: Execute the command synchronously.
+#   --line 1: Move the cursor to the first line.
+#   --name '...': Set the name of the title bar.
+#   --type: Set the syntax highlighter.
+editor = mate --wait --line 1 --name 'Git Commit Message' --type text.git-commit
+
+[push]
+default = simple
+
+[credential]
+helper = osxkeychain
