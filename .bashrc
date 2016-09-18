@@ -180,11 +180,15 @@ function git_dirty {
     local clean='nothing to commit'
     local push='Your branch is ahead'
     local dirty='added to commit'
+    local commit='Changes to be committed'
     
     # First check if the repo is dirty.
     if [[ $status =~ ${dirty} ]]; then echo $'\e[1;31m';
+        
+    # Next check if changes have been staged
+    elif [[ $status =~ ${commit} ]]; then echo $'\e[1;36m';
     
-    # If it's not dirty, check if its ahead
+    # Check if its ahead of remote
     elif [[ $status =~ ${push} ]]; then echo $'\e[1;33m';
     
     # Default to clean.
