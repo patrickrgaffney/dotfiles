@@ -184,8 +184,7 @@ function git_dirty {
         echo $'\e[1;33m'
     elif [[ $status =~ ${clean} ]]; then
         echo $'\e[1;32m'
-    elif [[ $status =~ ${dirty} ]]; then
-        echo $'\e[1;31m'
+    else echo $'\e[1;31m'
     fi
 }
 
