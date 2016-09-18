@@ -36,6 +36,14 @@ The states are determined by parsing the output from `git status` using `bash`'s
 - `git_branch()`: parses `git branch` to determine current branch name
 - `git_dirty()`: parses `git status` to determine current repo state (one of the above 4 states)
 
+### Terminal.app
+
+I am a religious user of Terminal.app — I have yet to bite from the [iTerm](https://iterm2.com/news.html) apple.
+
+The `eighties.terminal` plist contains the settings I use for my everyday sessions. It borrows most of its theme from [Chris Kempson's](https://github.com/chriskempson) excellent [Tomorrow Night Theme](https://github.com/ChrisKempson/Tomorrow-Theme). 
+
+It is important to note that all of the ANSI terminal colors are self-explanatory save for Cyan and Cyan Bright — both of these are shade of orange. This makes it easier to use 4 different states for the `git` prompt (see above): red, orange, yellow, and green.
+
 ### Textmate
 
 Currently, `mate` is used (with a slew of arguments) as the default `GIT_EDITOR`. A global `.tm_properties` file is in the works, just haven't finished going through and cleaning up my defaults.
