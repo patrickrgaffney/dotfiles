@@ -179,12 +179,16 @@ function git_dirty {
     local status=$(git status 2> /dev/null)
     local clean='nothing to commit'
     local push='Your branch is ahead'
-    local dirty='no changes added to commit'
-    if [[ $status =~ ${push} ]]; then
-        echo $'\e[1;33m'
-    elif [[ $status =~ ${clean} ]]; then
-        echo $'\e[1;32m'
-    else echo $'\e[1;31m'
+    local dirty='added to commit'
+    
+    # First check if the repo is dirty.
+    if [[ $status =~ ${dirty} ]]; then echo $'\e[1;31m';
+    
+    # If it's not dirty, check if its ahead
+    elif [[ $status =~ ${push} ]]; then echo $'\e[1;33m';
+    
+    # Default to clean.
+    else echo $'\e[1;32m';
     fi
 }
 
