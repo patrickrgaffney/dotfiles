@@ -55,73 +55,73 @@ set -o notify;
 #####################################################################
 
 # Executed a directory name as if it were an argument to cd.
-shopt -s autocd;
+shopt -s autocd
 
 # Correct spelling errors in directory names given to cd.
-shopt -s cdspell;
+shopt -s cdspell
 
 # Check the hash table for a command name before searching $PATH.
-shopt -s checkhash;
+shopt -s checkhash
 
 # Check the window size (update $LINES and $COLUMNS) 
 # after each command.
-shopt -s checkwinsize;
+shopt -s checkwinsize
 
 # Save all lines of a multi-line command in the same history entry.
-shopt -s cmdhist;
+shopt -s cmdhist
 
 # Correct spelling errors on directory names during word completion
 # if the directory name initially supplied does not exist.
-shopt -s dirspell;
+shopt -s dirspell
 
 # Expand aliases -- on by default
-shopt -s expand_aliases;
+shopt -s expand_aliases
 
 # Enable extended pattern matching features.
-shopt -s extglob;
+shopt -s extglob
 
 # Perform quoting within ${parameter} expansion -- on by default.
-shopt -s extquote;
+shopt -s extquote
 
 # Ignore suffixes specified by $FIGNORE when performing word
 # completion -- on by default.
-shopt -s force_fignore;
+shopt -s force_fignore
 
 # Enable `**` pattern in filename expansion to match all files,
 # directories and subdirectories.
-shopt -s globstar;
+shopt -s globstar
 
 # Append the history list to $HISTFILE instead of replacing it.
-shopt -s histappend;
+shopt -s histappend
 
 # Perform hostname completion -- on by default.
-shopt -s hostcomplete;
+shopt -s hostcomplete
 
 # Allow comments in an interactive shell -- on by default.
-shopt -s interactive_comments;
+shopt -s interactive_comments
 
 # Save multi-line commands to the history with embedded newlines
 # instead of semicolons -- requries cmdhist to be on.
-shopt -s lithist;
+shopt -s lithist
 
 # Do not attempt completions on an empty line.
-shopt -s no_empty_cmd_completion;
+shopt -s no_empty_cmd_completion
 
 # Case-insensitive filename matching in filename expansion.
-shopt -s nocaseglob;
+shopt -s nocaseglob
 
 # Enable programmable completion -- on by default.
-shopt -s progcomp;
+shopt -s progcomp
 
 # Perform parameter expansion, command substitution, arithmetic
 # expansion, and quote removal on prompt strings -- on by default.
-shopt -s promptvars;
+shopt -s promptvars
 
 # Allow the source builtin to use $PATH -- on by default.
-shopt -s sourcepath;
+shopt -s sourcepath
 
 # Make echo builtin expand backslash-escape-sequence.
-shopt -s xpg_echo;
+shopt -s xpg_echo
 
 
 #####################################################################
@@ -134,7 +134,7 @@ shopt -s xpg_echo;
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # Set TextMate to be the default editor
-export EDITOR='mate';
+export EDITOR='mate'
 
 # Ignore files with these suffixes when performing completion.
 export FIGNORE='.o:.pyc'
@@ -153,9 +153,23 @@ export HISTFILESIZE=5000
 export HISTSIZE=5000
 
 # Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 
+# Set colors for ls command.
+#   1.  directory: ex
+#   2.  symbolic link: fx
+#   3.  socket: gx
+#   4.  pipe: bx
+#   5.  executable: cx
+#   6.  block special: aH
+#   7.  character special: aA
+#   8.  executable with setuid bit set: cA
+#   9.  executable with setgid bit set: cH
+#   10. directory writable to others, with sticky bit: eA
+#   11. directory writable to others, without sticky bit: eH
+export CLICOLOR=1
+export LSCOLOR='exfxgxbxcxaHaAcAcHeAeH'
 
 #####################################################################
 # @section Prompt
@@ -179,10 +193,13 @@ export PROMPT_DIRTRIM=4
 alias k="clear"
 
 # List {a}ll files with {h}uman-{s}ize output long.
-alias lsl="ls -AghsG"
-
-# List files.
-alias ll="ls -lhGF"
+#   -A = List all entries except for `.` and `..`.
+#   -G = Enable colorized output.
+#   -h = Use unit suffixes for file size.
+#   -l = List in long format, omit group id.
+#   -P = List symbolic link, not its reference.
+#   -T = Display time information.
+alias ll="ls -PAGhlT"
 
 # Go back x director(y|ies).
 alias ..="cd ../"
