@@ -175,9 +175,66 @@ export LSCOLOR='exfxgxbxcxaHaAcAcHeAeH'
 # @section Prompt
 #####################################################################
 
+function git_dirty {
+    local status=$(git status 2> /dev/null)
+    local clean='nothing to commit'
+    local push='Your branch is ahead'
+    local dirty='no changes added to commit'
+    if [[ $status =~ ${push} ]]; then
+        echo $'\e[1;33m'
+    elif [[ $status =~ ${clean} ]]; then
+        echo $'\e[1;32m'
+    elif [[ $status =~ ${dirty} ]]; then
+        echo $'\e[1;31m'
+    fi
+}
+
+function git_branch {
+    IFS=$'\n'
+    local branches=$(git branch --no-color 2> /dev/null)
+    local prefix='\* '
+    local string=''
+    for branch in $branches; do
+        if [[ ${branch} == ${prefix}* ]]; then 
+            string+=':['
+            string+=$(git_dirty)
+            string+=${branch##$prefix}
+            string+=$'\e[0m'
+            string+=']'
+        fi
+    done
+    echo $string
+    unset IFS
+}
+
+# Begin appending information to PS1
+export PS1=''
+
+# Add cyan command-number: '\#'
+PS1+='\[\e[1;36m\]\#.\[\e[0m\] '
+
+# add bold username: '\u'
+PS1+='\[\e[1m\]\u\[\e[0m\]'
+
+# add bold-blue hostname: '\h'
+PS1+='\[\e[1;34m\]@\h\[\e[0m\] in '
+
+# add red working directory: '\w'
+PS1+='\[\e[1;31m\]\w\[\e[0m\]'
+
+# add git information
+PS1+='$(git_branch) '
+
+# add green time: '\A'
+PS1+='at \[\e[1;32m\]\A\[\e[0m\]'
+
+# add dollar-sign `$`
+PS1+='\n$ '
+
 # The number of trailing directory components to retain when adding
-# the directory names to the prompt.
-export PROMPT_DIRTRIM=4
+# the directory names to the prompt -- trailing directories are
+# marked with an `...` ellipsis.
+export PROMPT_DIRTRIM=3
 
 
 #####################################################################
@@ -199,7 +256,7 @@ alias k="clear"
 #   -l = List in long format, omit group id.
 #   -P = List symbolic link, not its reference.
 #   -T = Display time information.
-alias ll="ls -PAGhlT"
+alias ll="ls -AGhlTP"
 
 # Go back x director(y|ies).
 alias ..="cd ../"
