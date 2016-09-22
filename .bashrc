@@ -235,25 +235,25 @@ export PS1=''
 # Add cyan command-number: '\#'
 PS1+='\[\e[1;36m\]\#.\[\e[0m\] '
 
-# add bold username: '\u'
+# Add bold username: '\u'
 PS1+='\[\e[1m\]\u\[\e[0m\]'
 
-# add bold-blue hostname: '\h'
+# Add bold-blue hostname: '\h'
 PS1+='\[\e[1;34m\]@\h\[\e[0m\] in '
 
 # Add yellow virtualenv.
 PS1+='$(virtual_env)'
 
-# add red working directory: '\w'
+# Add red working directory: '\w'
 PS1+='\[\e[1;31m\]\w\[\e[0m\]'
 
-# add git information
+# Add git information
 PS1+='$(git_branch) '
 
-# add green time: '\A'
+# Add green time: '\A'
 PS1+='at \[\e[1;32m\]\A\[\e[0m\]'
 
-# add dollar-sign `$`
+# Add dollar-sign `$`
 PS1+='\n$ '
 
 # The number of trailing directory components to retain when adding
