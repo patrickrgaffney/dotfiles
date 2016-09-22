@@ -51,3 +51,7 @@ Currently, `mate` is used (with a slew of arguments) as the default `GIT_EDITOR`
 ### `nano`
 
 More to come on this.
+
+### Python
+
+There is support for *colored* `virtualenv` name in your bash prompt. They will appear in yellow — surrouned by parenthesis — inserted directly before the working directory.
