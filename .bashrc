@@ -219,7 +219,7 @@ function git_branch {
 
 function virtual_env {
     local string=''
-    if [[ ${VIRTUAL_ENV?} ]]; then 
+    if [[ ${VIRTUAL_ENV:+x} ]]; then 
         string+='('
         string+=$'\e[1;33m'
         string+=$(basename $VIRTUAL_ENV)
