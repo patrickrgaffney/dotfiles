@@ -3,7 +3,7 @@
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
 #   @created    2016-09-17
-#   @modified   2016-09-17
+#   @modified   2016-09-21
 #
 #   This file is loaded when invoking bash as an interactive shell
 #   that is *not* a login shell. Because of this behavior, this
@@ -171,6 +171,9 @@ export LC_ALL='en_US.UTF-8'
 export CLICOLOR=1
 export LSCOLOR='exfxgxbxcxaHaAcAcHeAeH'
 
+# Don't let virtualenv modify the bash prompt -- I will do this.
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 #####################################################################
 # @section Prompt
 #####################################################################
@@ -214,6 +217,18 @@ function git_branch {
     unset IFS
 }
 
+function virtual_env {
+    local string=''
+    if [[ ${VIRTUAL_ENV?} ]]; then 
+        string+='('
+        string+=$'\e[1;33m'
+        string+=$(basename $VIRTUAL_ENV)
+        string+=$'\e[0m'
+        string+='):'
+    fi
+    echo $string
+}
+
 # Begin appending information to PS1
 export PS1=''
 
@@ -225,6 +240,9 @@ PS1+='\[\e[1m\]\u\[\e[0m\]'
 
 # add bold-blue hostname: '\h'
 PS1+='\[\e[1;34m\]@\h\[\e[0m\] in '
+
+# Add yellow virtualenv.
+PS1+='$(virtual_env)'
 
 # add red working directory: '\w'
 PS1+='\[\e[1;31m\]\w\[\e[0m\]'
