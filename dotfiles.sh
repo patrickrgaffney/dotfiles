@@ -3,7 +3,7 @@
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
 #   @created    2016-09-17
-#   @modified   2016-09-17
+#   @modified   2016-09-23
 #
 #   This file creates symlinks for the dotfiles in the *current
 #   directory* to $HOME.
@@ -28,6 +28,9 @@ do
         continue;
     elif [[ $file == *.md ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Markdown file\n" $file
+        continue;
+    elif [[ $file == *.terminal ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is a Terminal settings file\n" $file
         continue;
     else ln -sv "$PWD/$file" "$HOME";
     fi
