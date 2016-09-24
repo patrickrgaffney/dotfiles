@@ -149,8 +149,8 @@ export GLOBIGNORE='.DS_Store:*.o:*.pyc'
 export HISTCONTROL='ignorespace:ignoredups'
 
 # Maximum number of lines/commands to save in the history file.
-export HISTFILESIZE=5000
-export HISTSIZE=5000
+export HISTFILESIZE=150
+export HISTSIZE=150
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8'
@@ -188,10 +188,10 @@ function git_dirty {
     # First check if the repo is dirty.
     if [[ $status =~ ${dirty} ]]; then echo $'\e[1;31m';
         
-    # Next check if changes have been staged
+    # Next check if changes have been staged.
     elif [[ $status =~ ${commit} ]]; then echo $'\e[1;36m';
     
-    # Check if its ahead of remote
+    # Check if its ahead of remote.
     elif [[ $status =~ ${push} ]]; then echo $'\e[1;33m';
     
     # Default to clean.
@@ -233,28 +233,28 @@ function virtual_env {
 export PS1=''
 
 # Add cyan command-number: '\#'
-PS1+='\[\e[1;36m\]\#.\[\e[0m\] '
+PS1+=$'\e[1;36m\#.\e[0m '
 
 # Add bold username: '\u'
-PS1+='\[\e[1m\]\u\[\e[0m\]'
+PS1+=$'\e[1m\u\e[0m'
 
 # Add bold-blue hostname: '\h'
-PS1+='\[\e[1;34m\]@\h\[\e[0m\] in '
+PS1+=$'\e[1;34m@\h\e[0m in '
 
 # Add yellow virtualenv.
 PS1+='$(virtual_env)'
 
 # Add red working directory: '\w'
-PS1+='\[\e[1;31m\]\w\[\e[0m\]'
+PS1+=$'\e[1;31m\w\e[0m'
 
 # Add git information
 PS1+='$(git_branch) '
 
 # Add green time: '\A'
-PS1+='at \[\e[1;32m\]\A\[\e[0m\]'
+PS1+=$'at \e[1;32m\A\e[0m'
 
 # Add dollar-sign `$`
-PS1+='\n$ '
+PS1+=$'\n$ '
 
 # The number of trailing directory components to retain when adding
 # the directory names to the prompt -- trailing directories are
