@@ -75,17 +75,17 @@ shopt -s cmdhist
 shopt -s dirspell
 
 # Expand aliases -- on by default
-shopt -s expand_aliases
+# shopt -s expand_aliases
 
 # Enable extended pattern matching features.
 shopt -s extglob
 
 # Perform quoting within ${parameter} expansion -- on by default.
-shopt -s extquote
+# shopt -s extquote
 
 # Ignore suffixes specified by $FIGNORE when performing word
 # completion -- on by default.
-shopt -s force_fignore
+# shopt -s force_fignore
 
 # Enable `**` pattern in filename expansion to match all files,
 # directories and subdirectories.
@@ -95,10 +95,10 @@ shopt -s globstar
 shopt -s histappend
 
 # Perform hostname completion -- on by default.
-shopt -s hostcomplete
+# shopt -s hostcomplete
 
 # Allow comments in an interactive shell -- on by default.
-shopt -s interactive_comments
+# shopt -s interactive_comments
 
 # Save multi-line commands to the history with embedded newlines
 # instead of semicolons -- requries cmdhist to be on.
@@ -111,14 +111,14 @@ shopt -s no_empty_cmd_completion
 shopt -s nocaseglob
 
 # Enable programmable completion -- on by default.
-shopt -s progcomp
+# shopt -s progcomp
 
 # Perform parameter expansion, command substitution, arithmetic
 # expansion, and quote removal on prompt strings -- on by default.
-shopt -s promptvars
+# shopt -s promptvars
 
 # Allow the source builtin to use $PATH -- on by default.
-shopt -s sourcepath
+# shopt -s sourcepath
 
 # Make echo builtin expand backslash-escape-sequence.
 shopt -s xpg_echo
