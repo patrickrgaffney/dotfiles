@@ -211,6 +211,7 @@ function git_branch {
             string+=${branch##$prefix}
             string+=$'\e[0m'
             string+=']'
+            break
         fi
     done
     echo $string
@@ -261,7 +262,6 @@ PS1+=$'\n$ '
 # marked with an `...` ellipsis.
 export PROMPT_DIRTRIM=3
 
-
 #####################################################################
 # @section Aliases
 #
@@ -283,7 +283,7 @@ alias k="clear"
 #   -T = Display time information.
 alias ll="ls -AGhlTP"
 
-# Go back x director(y|ies).
+# Go back (1|2) director(y|ies).
 alias ..="cd ../"
 alias ...="cd ../../"
 
