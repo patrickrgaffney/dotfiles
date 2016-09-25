@@ -16,7 +16,8 @@ git clone https://github.com/patrickrgaffney/dotfiles.git && sh dotfiles.sh
 
 Three files:
 
-- `.bash_profile`: basically just defers all the work to `.bashrc`.
+- `.bash_profile`: executes `.bashrc`.
+- `.profile`: executes `.bashrc`.
 - `.bashrc`: sets shell options, behavior, variables, prompt, and aliases
 - `.inputrc`: sets `readline` keymaps and run-time behaviors
 
@@ -54,4 +55,4 @@ More to come on this.
 
 ### Python
 
-There is support for *colored* `virtualenv` name in your bash prompt. They will appear in yellow — surrouned by parenthesis — inserted directly before the working directory.
+There is support for *colored* `virtualenv` name in your bash prompt. They will appear in yellow — surrounded by parenthesis — inserted directly before the working directory.
