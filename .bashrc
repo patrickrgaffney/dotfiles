@@ -131,7 +131,7 @@ shopt -s xpg_echo
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin/
 
 # Set TextMate to be the default editor
 export EDITOR='mate'
