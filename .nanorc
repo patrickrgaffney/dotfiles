@@ -1,0 +1,163 @@
+#####
+# ~/.nanorc -- startup file for nano editor
+#
+#   @author     Pat Gaffney <pat@hypepat.com>
+#   @created    2016-09-27
+#   @modified   2016-09-27
+#
+#   During startup, nano will first attempt to load the system-wide
+#   settings from /etc/nanorc, then the user-specifc settings from
+#   ~/.nanorc. 
+#
+#####################################################################
+
+#####################################################################
+# @section Nano Options
+#
+#   Nano accepts a series of *set* or *unset* commands.
+#
+#   Options in a nanorc file take precedence override any default
+#   settings. All options that do not take an argument are unset
+#   by default. Therefore, using the unset command is only needed
+#   when you are overriding a setting in /etc/nanorc inside of 
+#   your ~/.nanorc file. Options that take an argument cannot be 
+#   unset.
+#
+#   Quotes inside of string parameters do *not* have to be escaped.
+#   The very last double quote in the string will be treated as the
+#   ending delimiter of that string.
+#
+#####################################################################
+
+# Do not warn about errors in this (any) .nanorc file.
+# Must be placed at the top of the file to be truely effective.
+# set quiet
+
+# Use auto-indentation.
+set autoindent
+
+# Always show the cursor's position in the status bar.
+set constantshow
+
+# Hard wrap lines at the length of the screen ($COLUMNS) less *n*
+# columns, where *n* is the parameter.
+set fill -4
+
+# The color combination used for the function descriptions in the
+# two help planes at the bottom of the terminal.
+set functioncolor brightwhite
+
+# The color combination used for the shortcut key combinations in
+# the two help planes at the bottom of the terminal.
+set keycolor brightred
+
+# The opening/closing brackets that can be found by bracket searches.
+set matchbrackets "(<[{`)>]}`"
+
+# Enable mouse support -- mouse clicks set the cursor, etc.
+set mouse
+
+# Do not display the help at the bottom of the screen.
+# set nohelp
+
+# Do not add newline to the end of files.
+# set nonewlines
+
+# Save the cursor position of files between editing sessions.
+set positionlog
+
+# Use smooth scrolling.
+set smooth
+
+# Enable soft wrap.
+# set softwrap
+
+# The color combination to use for the status bar.
+set statuscolor brightblack,white
+
+# Use a tab size of *n* columns, where *n* is the parameter.
+set tabsize 4
+
+# Convert typed tabs to spaces.
+# set tabstospaces
+
+# The color combination for the title bar.
+set titlecolor brightwhite,blue
+
+# Detect puntuation as part of the word.
+set wordbounds
+
+# Specify which non-alphanumeric character should be treated as
+# part of the word bounds. Overrides wordbounds.
+# set wordchars "string"
+
+
+#####################################################################
+# @section Syntax Highlighting
+#
+#   Coloring different syntactic elements of a file is done by 
+#   regular expressions.
+#
+#   The include "syntaxfile" directive allows nano to read in self-
+#   contained color syntaxes from "syntaxfile". This is the 
+#   preferred method.
+#
+#####################################################################
+
+# C -- system file
+include "/usr/local/share/nano/c.nanorc"
+
+# Changelog -- system file
+include "/usr/local/share/nano/changelog.nanorc"
+
+# CSS -- system file
+include "/usr/local/share/nano/css.nanorc"
+
+# HTML -- system file
+include "/usr/local/share/nano/html.nanorc"
+
+# Javascript -- system file
+include "/usr/local/share/nano/javascript.nanorc"
+
+# JSON -- system file
+include "/usr/local/share/nano/json.nanorc"
+
+# Makefile -- system file
+include "/usr/local/share/nano/makefile.nanorc"
+
+# Nanorc -- system file
+include "/usr/local/share/nano/nanorc.nanorc"
+
+# Objective-C -- system file
+include "/usr/local/share/nano/objc.nanorc"
+
+# Python -- system file
+include "/usr/local/share/nano/python.nanorc"
+
+# Shell -- system file
+include "/usr/local/share/nano/sh.nanorc"
+
+
+#####################################################################
+# @section Key Bindings
+#
+#   Key bindings can be changed via the following two commands:
+#
+#       1. bind key function menu
+#
+#           Where `bind` rebinds `key` to `function` in the context 
+#           of  `menu`, or in all menus by using `all`. 
+#
+#       2. unbind key menu
+#       
+#           Where `unbind` unbinds `key` from `menu` or from all
+#           menus by using `all`.
+#
+#   The format of `key` should be:
+#
+#       1. `^` followed by an alpha character or the word "Space".
+#       2. `M-` followed by a printable character or word "Space".
+#       3. `F` followed by a numeric value from 1 to 16.
+#
+#####################################################################
+
