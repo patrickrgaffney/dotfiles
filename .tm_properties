@@ -1,1 +1,1 @@
-includeFilesInBrowser = "{.bash*,.gitignore,.tm_properties,.inputrc,.profile}"
+includeFilesInBrowser = "{.bash*,.gitignore,.tm_properties,.inputrc,.profile,.nanorc}"
