@@ -260,10 +260,4 @@ $if mode=emacs
 # Shift-backspace to forward-delete a character
 "\e[3;5~": forward-backward-delete-char
 
-# Down to go forward in history
-"\ea": next-history
-
-# Up to go back in history
-"\ec": previous-history
-
 $endif
