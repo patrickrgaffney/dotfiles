@@ -1,1 +1,13 @@
-includeFilesInBrowser = "{.bash*,.gitignore,.tm_properties,.inputrc,.profile,.nanorc}"
+#####################################################################
+# @section Files
+#####################################################################
+
+exclude = "*.o,*.pyc"
+excludeDirectoriesInBrowser = "{.git}"
+include = "{.bash*,.gitignore,.tm_properties,.inputrc,.profile,.nanorc}"
+
+#####################################################################
+# @section Variables
+#####################################################################
+
+TM_ORGANIZATION_NAME = 'hypepat'
