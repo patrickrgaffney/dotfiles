@@ -137,11 +137,11 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin/
 export EDITOR='mate'
 
 # Ignore files with these suffixes when performing completion.
-export FIGNORE='.o:.pyc'
+export FIGNORE='.o:.pyc:.git'
 
 # Ignore files that match these patterns when 
 # performing filename expansion.
-export GLOBIGNORE='.DS_Store:*.o:*.pyc'
+export GLOBIGNORE='.DS_Store:*.o:*.pyc:.git'
 
 # History file control:
 #   - ignorespace = don't save lines that begin with a space
