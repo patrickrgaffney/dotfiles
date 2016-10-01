@@ -1,10 +1,24 @@
+#####
+# ~/.tm_properties -- global properties for textmate
+#
+#   @author     Pat Gaffney <pat@hypepat.com>
+#   @created    2016-09-15
+#   @modified   2016-09-30
+#
+#   TextMate searchs from the current directory up to / looking for 
+#	.tm_properties. Thus, the global .tm_properties file is at $HOME.
+#	This file contains basic standards that can be overridden in the
+#	actual project directory if needed.
+#
+#####################################################################
+
 #####################################################################
 # @section Files
 #####################################################################
 
-exclude = "*.o,*.pyc"
-excludeDirectoriesInBrowser = "{.git}"
-include = "{.bash*,.gitignore,.tm_properties,.inputrc,.profile,.nanorc}"
+exclude = "{*.{o,pyc},.DS_Store}"
+include = "{*,.gitignore,.bash*,.tm_properties,.inputrc,.profile,.nanorc,.gitconfig,.hushlogin}"
+binary   = "{*.{ai,bz2,flv,gif,gz,icns,ico,jpg,jpeg,m4v,nib,o,pdf,png,psd,pyc,rtf,scssc,swf,tar,tbz,tgz,tif,tiff,zip},Icon}"
 
 #####################################################################
 # @section Variables
