@@ -7,7 +7,7 @@
 The following will download the files to your current directory and create symlinks for the important stuff to `$HOME`. Some care should be taken to (at minimum) change the settings in the `.gitconfig` file, which are very opinionated — for starters, they assume you share my name and email.
 
 ```bash
-git clone https://github.com/patrickrgaffney/dotfiles.git && sh dotfiles.sh
+git clone https://github.com/patrickrgaffney/dotfiles.git && cd dotfiles && sh dotfiles.sh
 ```
 
 ## Program Support
