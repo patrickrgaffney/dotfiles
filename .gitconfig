@@ -3,7 +3,7 @@
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
 #   @created    2016-09-17
-#   @modified   2016-09-17
+#   @modified   2016-11-29
 #
 #   The presence of this file overrides the system (--system) 
 #   defaults, located in /etc/gitconfig. The settings in this file
@@ -17,6 +17,7 @@ name = Pat Gaffney
 email = pat@hypepat.com
 
 [alias]
+aa = add --all
 st = status
 co = checkout
 br = branch

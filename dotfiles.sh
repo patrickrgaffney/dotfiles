@@ -14,6 +14,8 @@
 # ln -s :: create symbolic link
 # ln -v :: verbose mode- print details
 
+echo $'\e[1;34mInstalling symlinks:\e[0m'
+
 # Create a symlink for each file in this directory.
 for file in $(ls -A)
 do
