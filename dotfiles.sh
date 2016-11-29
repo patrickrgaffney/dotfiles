@@ -19,19 +19,14 @@ for file in $(ls -A)
 do
     if [[ -d $file ]]; then 
         printf "dotfiles.sh: Skipping \'%s\' -- it is a directory\n" $file
-        continue;
     elif [[ -x $file ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is an executable\n" $file
-        continue;
     elif [[ $file == *.png ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a picture\n" $file
-        continue;
     elif [[ $file == *.md ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Markdown file\n" $file
-        continue;
     elif [[ $file == *.terminal ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Terminal settings file\n" $file
-        continue;
     else ln -sv "$PWD/$file" "$HOME";
     fi
 done
