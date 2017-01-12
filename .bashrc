@@ -123,7 +123,7 @@ shopt -s xpg_echo
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/opt
 
 # Set TextMate to be the default editor
 export EDITOR='mate'
@@ -163,8 +163,21 @@ export LC_ALL='en_US.UTF-8'
 export CLICOLOR=1
 export LSCOLOR='exfxgxbxcxaHaAcAcHeAeH'
 
+#####################################################################
+# Python
+#####################################################################
+
 # Don't let virtualenv modify the bash prompt -- I will do this.
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+#####################################################################
+# Node
+#####################################################################
+
+# Load the Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+
 
 #####################################################################
 # Prompt
