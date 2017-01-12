@@ -294,3 +294,10 @@ alias ...="cd ../../"
 
 # Open current directory in Finder.app.
 alias finder="open -a Finder ./"
+
+#####################################################################
+# Other Files to Load
+#####################################################################
+
+# Private configurations.
+[ -s "~/.private" ] && . "~/.private"
