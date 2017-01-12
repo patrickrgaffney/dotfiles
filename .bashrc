@@ -3,7 +3,7 @@
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
 #   @created    2016-09-17
-#   @modified   2016-09-21
+#   @modified   2017-01-12
 #
 #   This file is loaded when invoking bash as an interactive shell
 #   that is *not* a login shell. Because of this behavior, this
@@ -13,17 +13,14 @@
 #####################################################################
 
 #####################################################################
-# @section Shell Options
+# Shell Options
 #
-#   Change the values of shell options and set the positional
-#   parameters, or display the names of shell variables.
+# If any option has both a single character flag (`-x`) *and* a
+# option name (`-o option-name`), the option-name is chosen for
+# general readability.
 #
-#   If any option has both a single character flag (`-x`) *and* a
-#   option name (`-o option-name`), the option-name is chosen for
-#   general readability.
-#
-#   Any options that are turned on by *default* are also listed here
-#   so that they could be easily turned off in the future if needed.
+# Any options that are turned on by *default* are also listed here
+# so that they could be easily turned off in the future if needed.
 #####################################################################
 
 # Allow the shell to perform brace expansion - on by default.
@@ -48,10 +45,7 @@ set -o notify;
 
 
 #####################################################################
-# @section Change Shell Behavior
-#
-#   Enable and disable various options via the shopt builtin. By
-#   default *most* of these options are disabled (turned off).
+# Shell Behavior
 #####################################################################
 
 # Executed a directory name as if it were an argument to cd.
@@ -125,13 +119,11 @@ shopt -s xpg_echo
 
 
 #####################################################################
-# @section Variables
-#
-#   Set variables used by bash.
+# Environment Variables
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin/
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
 
 # Set TextMate to be the default editor
 export EDITOR='mate'
@@ -175,7 +167,7 @@ export LSCOLOR='exfxgxbxcxaHaAcAcHeAeH'
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #####################################################################
-# @section Prompt
+# Prompt
 #####################################################################
 
 function git_dirty {
@@ -263,12 +255,12 @@ PS1+=$'\n$ '
 export PROMPT_DIRTRIM=3
 
 #####################################################################
-# @section Aliases
+# Aliases
 #
-#   Set up simple aliases to enable default options for commands.
-#   For almost every purpose, shell functions are preferred over
-#   aliases, so some care has been taken to ensure that the alises
-#   defined here would *not* work better as functions.
+# Set up simple aliases to enable default options for commands.
+# For almost every purpose, shell functions are preferred over
+# aliases, so some care has been taken to ensure that the alises
+# defined here would *not* work better as functions.
 #####################################################################
 
 # Clear the screen.
