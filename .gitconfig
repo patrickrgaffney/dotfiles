@@ -34,8 +34,8 @@ hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 #   --type: Set the syntax highlighter.
 editor = mate --wait --line 1 --name 'Git Commit Message' --type text.git-commit
 
-# [push]
-# default = simple
-#
-# [credential]
-# helper = osxkeychain
+[push]
+default = simple
+
+[credential]
+helper = osxkeychain
