@@ -178,6 +178,14 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
 
+#####################################################################
+# Java
+#####################################################################
+
+if [ -x "$(command -v java)" ]
+then
+	export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+fi	
 
 #####################################################################
 # Prompt
