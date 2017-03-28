@@ -174,15 +174,17 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # Node
 #####################################################################
 
-# Load the Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
-
 #####################################################################
-# Java
+# Go
 #####################################################################
 
-if [ -x "$(command -v java)" ]
+export GOPATH="/Users/patrickrgaffney/Code/go"
+
+#####################################################################
+# Java / Scala
+#####################################################################
+
+if [ -x "$(command -v scala)" ]
 then
 	export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 fi	
