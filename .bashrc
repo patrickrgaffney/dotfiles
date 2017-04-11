@@ -228,13 +228,14 @@ PS1+=$'\n$ '
 # marked with an `...` ellipsis.
 export PROMPT_DIRTRIM=3
 
-#####################################################################
+##
 # Aliases
 #
 # Set up simple aliases to enable default options for commands.
 # For almost every purpose, shell functions are preferred over
 # aliases, so some care has been taken to ensure that the alises
 # defined here would *not* work better as functions.
+#
 #####################################################################
 
 # Clear the screen.
@@ -256,9 +257,8 @@ alias ...="cd ../../"
 # Open current directory in Finder.app.
 alias finder="open -a Finder ./"
 
-#####################################################################
-# Other Files to Load
+##
+# Private Configurations
 #####################################################################
 
-# Private configurations.
-[ -s "~/.private" ] && . "~/.private"
+[[ -s ~/.private ]] && source ~/.private
