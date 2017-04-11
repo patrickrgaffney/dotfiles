@@ -1,4 +1,4 @@
-#####
+##
 # ~/.bashrc -- startup file for bash (interactive non-login)
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
@@ -12,7 +12,7 @@
 #
 #####################################################################
 
-#####################################################################
+##
 # Shell Options
 #
 # If any option has both a single character flag (`-x`) *and* a
@@ -23,19 +23,6 @@
 # so that they could be easily turned off in the future if needed.
 #####################################################################
 
-# Allow the shell to perform brace expansion - on by default.
-# set -o braceexpand;
-
-# Locate and remember hash commands as they are 
-# looked up for execution -- on by default.
-# set -o hashall;
-
-# Enable history substitution -- on by default.
-# set -o histexpand;
-
-# Enable command history -- on by default.
-# set -o history;
-
 # Do not exit an interactive shell upon reading EOF.
 set -o ignoreeof;
 
@@ -44,7 +31,7 @@ set -o ignoreeof;
 set -o notify;
 
 
-#####################################################################
+##
 # Shell Behavior
 #####################################################################
 
@@ -74,25 +61,12 @@ shopt -s dirspell
 # Enable extended pattern matching features.
 shopt -s extglob
 
-# Perform quoting within ${parameter} expansion -- on by default.
-# shopt -s extquote
-
-# Ignore suffixes specified by $FIGNORE when performing word
-# completion -- on by default.
-# shopt -s force_fignore
-
 # Enable `**` pattern in filename expansion to match all files,
 # directories and subdirectories.
 shopt -s globstar
 
 # Append the history list to $HISTFILE instead of replacing it.
 shopt -s histappend
-
-# Perform hostname completion -- on by default.
-# shopt -s hostcomplete
-
-# Allow comments in an interactive shell -- on by default.
-# shopt -s interactive_comments
 
 # Save multi-line commands to the history with embedded newlines
 # instead of semicolons -- requries cmdhist to be on.
@@ -103,16 +77,6 @@ shopt -s no_empty_cmd_completion
 
 # Case-insensitive filename matching in filename expansion.
 shopt -s nocaseglob
-
-# Enable programmable completion -- on by default.
-# shopt -s progcomp
-
-# Perform parameter expansion, command substitution, arithmetic
-# expansion, and quote removal on prompt strings -- on by default.
-# shopt -s promptvars
-
-# Allow the source builtin to use $PATH -- on by default.
-# shopt -s sourcepath
 
 # Make echo builtin expand backslash-escape-sequence.
 shopt -s xpg_echo
