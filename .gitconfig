@@ -27,12 +27,9 @@ last = log -1 HEAD
 hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [core]
-# Set TextMate to be the default editor.
+# Set Sublime Text to be the default editor.
 #   --wait: Execute the command synchronously.
-#   --line 1: Move the cursor to the first line.
-#   --name '...': Set the name of the title bar.
-#   --type: Set the syntax highlighter.
-editor = mate --wait --line 1 --name 'Git Commit Message' --type text.git-commit
+editor = subl --wait
 
 [push]
 default = simple
