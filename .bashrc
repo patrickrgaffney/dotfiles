@@ -1,9 +1,9 @@
 ##
 # ~/.bashrc -- startup file for bash (interactive non-login)
 #
-#   @author     Pat Gaffney <pat@hypepat.com>
-#   @created    2016-09-17
-#   @modified   2017-01-12
+#   author:     Pat Gaffney <pat@hypepat.com>
+#   created:    2016-09-17
+#   modified:   2017-04-10
 #
 #   This file is loaded when invoking bash as an interactive shell
 #   that is *not* a login shell. Because of this behavior, this
