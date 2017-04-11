@@ -1,4 +1,4 @@
-#####
+##
 # ~/.profile -- startup file for bash (invoked with sh)
 #
 #	author:		Pat Gaffney <pat@hypepat.com>
