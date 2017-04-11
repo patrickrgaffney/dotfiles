@@ -37,5 +37,8 @@ editor = mate --wait --line 1 --name 'Git Commit Message' --type text.git-commit
 [push]
 default = simple
 
+[branch]
+autosetuprebase = always
+
 [credential]
 helper = osxkeychain
