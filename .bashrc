@@ -90,7 +90,7 @@ shopt -s xpg_echo
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt
 
 # Set TextMate to be the default editor
-export EDITOR='mate'
+export EDITOR='subl'
 
 # Ignore files with these suffixes when performing completion.
 export FIGNORE='.o:.pyc:.git'
