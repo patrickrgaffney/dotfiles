@@ -25,6 +25,8 @@ do
         printf "dotfiles.sh: Skipping \'%s\' -- it is an executable\n" $file
     elif [[ $file == *.png ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a picture\n" $file
+    elif [[ $file == .gitignore ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is a gitignore\n" $file
     elif [[ $file == *.md ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Markdown file\n" $file
     elif [[ $file == *.terminal ]]; then
