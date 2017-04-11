@@ -55,9 +55,6 @@ shopt -s cmdhist
 # if the directory name initially supplied does not exist.
 shopt -s dirspell
 
-# Expand aliases -- on by default
-# shopt -s expand_aliases
-
 # Enable extended pattern matching features.
 shopt -s extglob
 
@@ -217,11 +214,11 @@ PS1+=$'\e[1;31m\w\e[0m'
 # Add git information
 PS1+='$(git_branch) '
 
-# Add green time: '\A'
-PS1+=$'at \e[1;32m\A\e[0m'
+# Add magenta time: '\A'
+PS1+=$'at \e[1;35m\A\e[0m'
 
 # Add dollar-sign `$`
-PS1+=$'\n$ '
+PS1+=$'\n\e[1;34m$\e[0m '
 
 # The number of trailing directory components to retain when adding
 # the directory names to the prompt -- trailing directories are
