@@ -185,9 +185,9 @@ function virtual_env {
     local string=''
     if [[ ${VIRTUAL_ENV:+x} ]]; then 
         string+='('
-        string+=$'\e[1;33m'
+        string+=$'\[\e[1;33m\]'
         string+=$(basename $VIRTUAL_ENV)
-        string+=$'\e[0m'
+        string+=$'\[\e[0m\]'
         string+='):'
     fi
     echo $string
@@ -197,28 +197,28 @@ function virtual_env {
 export PS1=''
 
 # Add cyan command-number: '\#'
-PS1+=$'\e[1;36m\#.\e[0m '
+PS1+=$'\[\e[1;36m\]\#.\[\e[0m\] '
 
 # Add bold username: '\u'
-PS1+=$'\e[1m\u\e[0m'
+PS1+=$'\[\e[1m\]\u\[\e[0m\]'
 
 # Add bold-blue hostname: '\h'
-PS1+=$'\e[1;34m@\h\e[0m in '
+PS1+=$'\[\e[1;34m\]@\h\[\e[0m\] in '
 
 # Add yellow virtualenv.
 PS1+='$(virtual_env)'
 
 # Add red working directory: '\w'
-PS1+=$'\e[1;31m\w\e[0m'
+PS1+=$'\[\e[1;31m\]\w\[\e[0m\]'
 
 # Add git information
 PS1+='$(git_branch) '
 
 # Add magenta time: '\A'
-PS1+=$'at \e[1;35m\A\e[0m'
+PS1+=$'at \[\e[1;35m\]\A\[\e[0m\]\n'
 
 # Add dollar-sign `$`
-PS1+=$'\n\e[1;34m$\e[0m '
+PS1+=$'\[\e[1;34m\]$ \[\e[0m\]'
 
 # The number of trailing directory components to retain when adding
 # the directory names to the prompt -- trailing directories are
