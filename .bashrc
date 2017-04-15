@@ -135,7 +135,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # Go
 #####################################################################
 
-export GOPATH="~/Code/go"
+export GOPATH=/Users/patrickrgaffney/Code/go
 
 ##
 # Prompt
