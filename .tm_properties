@@ -27,7 +27,7 @@ saveOnBlur = true
 #####################################################################
 
 exclude = "{*.{o,pyc},.DS_Store}"
-include = "{*,.gitignore,.bash*,.tm_properties,.inputrc,.profile,.nanorc,.gitconfig,.hushlogin}"
+include = "{*,.gitignore,.swift*,.bash*,.tm_properties,.inputrc,.profile,.nanorc,.gitconfig,.hushlogin}"
 binary  = "{*.{ai,bz2,flv,gif,gz,icns,ico,jpg,jpeg,m4v,nib,o,pdf,png,psd,pyc,rtf,scssc,swf,tar,tbz,tgz,tif,tiff,zip},Icon}"
 
 #####################################################################
@@ -46,7 +46,7 @@ TM_ORGANIZATION_NAME = "hypepat"
 # Javascript
 #####################################################################
 
-[ source.javascript ]
+[ source.js ]
 softTabs = true
 tabSize  = 2
 
