@@ -16,8 +16,8 @@
 # App Settings
 #####################################################################
 
-# theme    = ""
-fontSize   = 12
+theme      = "DE477E5B-BD4D-46B0-BF80-2EA32A2814D5"
+fontSize   = 14
 encoding   = "UTF-8"
 saveOnBlur = true
 
@@ -34,7 +34,7 @@ binary  = "{*.{ai,bz2,flv,gif,gz,icns,ico,jpg,jpeg,m4v,nib,o,pdf,png,psd,pyc,rtf
 # Directories
 #####################################################################
 
-excludeDirectories = ".git"
+excludeDirectories = "{.git,node_modules}"
 
 #####################################################################
 # Variables
