@@ -16,7 +16,8 @@
 # App Settings
 #####################################################################
 
-theme      = "DE477E5B-BD4D-46B0-BF80-2EA32A2814D5"
+# theme    = "Oceanic Next"
+theme      = "21A3A5F5-E82F-48A8-BC8B-9AEF307F6131"
 fontSize   = 14
 encoding   = "UTF-8"
 saveOnBlur = true
