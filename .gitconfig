@@ -29,6 +29,7 @@
     cm = commit
     last = log -1 HEAD
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    undo = reset HEAD~
 
 [core]
     editor = subl --wait
