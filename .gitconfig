@@ -13,29 +13,30 @@
 #####################################################################
 
 [user] 
-name = Pat Gaffney
-email = pat@hypepat.com
+    name = Pat Gaffney
+    email = pat@hypepat.com
+
 
 [alias]
-aa = add --all
-st = status
-co = checkout
-br = branch
-up = rebase
-cm = commit
-last = log -1 HEAD
-hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    aa = add --all
+    st = status
+    co = checkout
+    br = branch
+    up = rebase
+    cm = commit
+    last = log -1 HEAD
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [core]
-# Set Sublime Text to be the default editor.
-#   --wait: Execute the command synchronously.
-editor = subl --wait
+    # Set Sublime Text to be the default editor.
+    #   --wait: Execute the command synchronously.
+    editor = subl --wait
 
 [push]
-default = simple
+    default = simple
 
 [branch]
-autosetuprebase = always
+    autosetuprebase = always
 
 [credential]
-helper = osxkeychain
+    helper = osxkeychain
