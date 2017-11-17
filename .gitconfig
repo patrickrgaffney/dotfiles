@@ -16,6 +16,9 @@
     name = Pat Gaffney
     email = pat@hypepat.com
 
+# Include my Work-specific .gitconfig
+[includeIf "gitdir:~/Work/**"]
+    path = ~/Work/.gitconfig
 
 [alias]
     aa = add --all
@@ -28,8 +31,6 @@
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [core]
-    # Set Sublime Text to be the default editor.
-    #   --wait: Execute the command synchronously.
     editor = subl --wait
 
 [push]
