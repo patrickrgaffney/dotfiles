@@ -18,7 +18,7 @@
 
 # theme    = "Oceanic Next"
 theme      = "21A3A5F5-E82F-48A8-BC8B-9AEF307F6131"
-fontName   = "Fira Mono"
+fontName   = "Fira Mono Medium"
 fontSize   = 15
 encoding   = "UTF-8"
 saveOnBlur = true
