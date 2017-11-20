@@ -65,5 +65,8 @@ tabSize  = 4
 #####################################################################
 
 [ text.html.markdown ]
-softTabs = true
-tabSize  = 4
+softTabs   		 = true
+tabSize    		 = 4
+softWrap   		 = true
+spellChecking    = true
+spellingLanguage = 'en'
