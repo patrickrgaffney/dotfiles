@@ -23,7 +23,6 @@ fontSize   = 15
 encoding   = "UTF-8"
 saveOnBlur = true
 
-
 #####################################################################
 # Files
 #####################################################################
@@ -42,7 +41,8 @@ excludeDirectories = "{.git,node_modules}"
 # Variables
 #####################################################################
 
-TM_ORGANIZATION_NAME = "hypepat"
+TM_ORGANIZATION_NAME 		= "hypepat"
+TM_JAVASCRIPT_ESLINT_ESLINT = "/usr/local/bin/eslint"
 
 #####################################################################
 # Javascript
