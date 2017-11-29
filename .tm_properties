@@ -28,7 +28,7 @@ saveOnBlur = true
 #####################################################################
 
 exclude = "{*.{o,pyc},.DS_Store,.hushlogin,.*cache}"
-include = "{*,.gitignore,.swift*,.bash*,.tm_properties,.*rc,.profile,.gitconfig}"
+include = "{*,.gitignore,.swift*,.bash*,.tm_properties,.*rc,.profile,.gitconfig,.env}"
 binary  = "{*.{ai,bz2,flv,gif,gz,icns,ico,jpg,jpeg,m4v,nib,o,pdf,png,psd,pyc,rtf,scssc,swf,tar,tbz,tgz,tif,tiff,zip},Icon}"
 
 #####################################################################
