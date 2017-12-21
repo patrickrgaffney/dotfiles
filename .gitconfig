@@ -32,7 +32,7 @@
     undo = reset HEAD~
 
 [core]
-    editor = subl --wait
+    editor = mate --wait
 
 [push]
     default = simple
