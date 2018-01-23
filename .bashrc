@@ -84,7 +84,7 @@ shopt -s xpg_echo
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/.bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/Code/go/bin
 
 # Set TextMate to be the default editor
 export EDITOR='subl'
@@ -135,7 +135,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # Go
 #####################################################################
 
-export GOPATH=/Users/patrickgaffney/Code/go:/Users/patrickgaffney/Work
+export GOPATH=/Users/patrickgaffney/Code/go:/Users/patrickgaffney/Work/go
 
 ##
 # Postgres
