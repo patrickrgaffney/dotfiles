@@ -135,7 +135,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # Go
 #####################################################################
 
-export GOPATH=/Users/patrickgaffney/Code/go:/Users/patrickgaffney/Work/go
+export GOPATH="$HOME"/Code/go:"$HOME"/Work/go
 
 ##
 # Postgres
