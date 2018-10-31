@@ -37,3 +37,6 @@ do
     else ln -sv "$PWD/$file" "$HOME";
     fi
 done
+
+# Create symlink for my iTerm2 profiles to AppSupport directory.
+ln -sv "$PWD/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
