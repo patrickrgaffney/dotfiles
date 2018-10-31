@@ -16,7 +16,8 @@
 
 echo $'\e[1;34mInstalling symlinks:\e[0m'
 
-# Create a symlink for each file in this directory.
+# Create a symlink for each appropriate file
+# in this directory to $HOME.
 for file in $(ls -A)
 do
     if [[ -d $file ]]; then 
@@ -31,6 +32,8 @@ do
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Markdown file\n" $file
     elif [[ $file == *.terminal ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Terminal settings file\n" $file
+    elif [[ $file == *.json ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is a JSON file\n" $file
     else ln -sv "$PWD/$file" "$HOME";
     fi
 done
