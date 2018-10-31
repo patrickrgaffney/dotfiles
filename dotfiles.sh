@@ -32,6 +32,8 @@ do
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Markdown file\n" $file
     elif [[ $file == *.terminal ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a Terminal settings file\n" $file
+    elif [[ $file == *.itermcolors ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is an iTerm2 color file\n" $file
     elif [[ $file == *.json ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a JSON file\n" $file
     else ln -sv "$PWD/$file" "$HOME";
