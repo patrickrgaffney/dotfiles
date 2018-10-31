@@ -42,3 +42,5 @@
 
 [credential]
     helper = osxkeychain
+[url "git@github.platforms.engineering:"]
+	insteadof = https://github.platforms.engineering/
