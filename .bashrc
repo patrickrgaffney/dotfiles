@@ -94,7 +94,7 @@ export FIGNORE='.o:.pyc:.git:cache'
 
 # Ignore files that match these patterns when 
 # performing filename expansion.
-export GLOBIGNORE='.DS_Store:*.o:*.pyc:.git'
+export GLOBIGNORE='.DS_Store:*.o:*.pyc:.git:*cache'
 
 # History file control:
 #   - ignorespace = don't save lines that begin with a space
