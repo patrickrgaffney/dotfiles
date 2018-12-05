@@ -90,7 +90,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 export EDITOR='subl'
 
 # Ignore files with these suffixes when performing completion.
-export FIGNORE='.o:.pyc:.git'
+export FIGNORE='.o:.pyc:.git:cache'
 
 # Ignore files that match these patterns when 
 # performing filename expansion.
