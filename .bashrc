@@ -84,7 +84,7 @@ shopt -s xpg_echo
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/Code/go/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/Code/go/bin
 
 # Set TextMate to be the default editor
 export EDITOR='subl'
