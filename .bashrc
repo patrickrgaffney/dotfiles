@@ -163,7 +163,6 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 function git_dirty {
     local status=$(git status 2> /dev/null)
-    local clean='nothing to commit'
     local push='Your branch is ahead'
     local dirty='added to commit'
     local commit='Changes to be committed'
@@ -197,20 +196,8 @@ function git_branch {
             break
         fi
     done
-    echo $string
+    echo "$string"
     unset IFS
-}
-
-function virtual_env {
-    local string=''
-    if [[ ${VIRTUAL_ENV:+x} ]]; then 
-        string+='('
-        string+=$'\[\e[1;33m\]'
-        string+=$(basename $VIRTUAL_ENV)
-        string+=$'\[\e[0m\]'
-        string+='):'
-    fi
-    echo $string
 }
 
 # Begin appending information to PS1
@@ -224,9 +211,6 @@ PS1+=$'\[\e[1m\]\u\[\e[0m\]'
 
 # Add bold-blue hostname: '\h'
 PS1+=$'\[\e[1;34m\]@\h\[\e[0m\] in '
-
-# Add yellow virtualenv.
-PS1+='$(virtual_env)'
 
 # Add red working directory: '\w'
 PS1+=$'\[\e[1;31m\]\w\[\e[0m\]'
