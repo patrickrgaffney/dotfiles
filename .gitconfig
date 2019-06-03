@@ -42,7 +42,3 @@
 
 [credential]
     helper = osxkeychain
-
-# Work-specific GHE
-[url "git@github.platforms.engineering:"]
-	insteadof = https://github.platforms.engineering/
