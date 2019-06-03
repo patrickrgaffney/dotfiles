@@ -51,7 +51,7 @@
   "font_size": 14,
   "gutter": true,
   "gpu_window_buffer": "auto",
-  "highlight_line": true,
+  "highlight_line": false,
   "highlight_modified_tabs": false,
   "hot_exit": true,
   "ignored_packages": [
