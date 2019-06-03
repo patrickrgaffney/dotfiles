@@ -17,8 +17,8 @@
     email = pat@hypepat.com
 
 # Include my Work-specific .gitconfig
-[includeIf "gitdir:~/Work/**"]
-    path = ~/Work/.gitconfig
+[includeIf "gitdir:~/work/**"]
+    path = ~/work/.gitconfig
 
 [alias]
     aa = add --all
