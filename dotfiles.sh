@@ -42,3 +42,6 @@ done
 
 # Create symlink for my iTerm2 profiles to AppSupport directory.
 ln -sv "$PWD/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
+
+# Create the symlink for the Sublime Text preferences.
+ln -sv "$PWD/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
