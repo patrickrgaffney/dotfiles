@@ -94,7 +94,7 @@
 		"node_modules"
 	],
 	"font_fase": "Fira Mono",
-	"font_size": 14,
+	"font_size": 15,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
 	"gutter": true,
