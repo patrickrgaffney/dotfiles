@@ -91,7 +91,8 @@
 		".git",
 		".hg",
 		"CVS",
-		"node_modules"
+		"node_modules",
+		"coverage"
 	],
 	"font_fase": "Fira Mono",
 	"font_size": 15,
