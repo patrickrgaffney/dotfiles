@@ -150,6 +150,7 @@
 	"show_navigation_bar": true,
 	"show_panel_on_build": true,
 	"show_tab_close_buttons": true,
+	"show_full_path": false,
 	"smart_indent": true,
 	"spell_check": false,
 	"spelling_selector": "markup.raw, source string.quoted - punctuation - meta.preprocessor.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)",
