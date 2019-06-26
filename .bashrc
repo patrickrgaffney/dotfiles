@@ -157,7 +157,7 @@ export GOPATH="$HOME"/Code/go:"$HOME"/Work/go
 #####################################################################
 
 # Because, well shit.
-# Props to @jskidis, for never taking any [red]shit.
+# Props to @jskidis, for this stroke of genius.
 function aws {
     case $* in
         redshit* )
