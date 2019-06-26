@@ -73,6 +73,10 @@ shopt -s no_empty_cmd_completion
 # Case-insensitive filename matching in filename expansion.
 shopt -s nocaseglob
 
+# Treat unknown commands as aliases during completion,
+# attempt completion from the resulting alias.
+shopt -s progcomp_alias
+
 # Make echo builtin expand backslash-escape-sequence.
 shopt -s xpg_echo
 
