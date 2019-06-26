@@ -2,8 +2,6 @@
 # ~/.bashrc -- startup file for bash (interactive non-login)
 #
 #   author:     Pat Gaffney <pat@hypepat.com>
-#   created:    2016-09-17
-#   modified:   2017-04-10
 #
 #   This file is loaded when invoking bash as an interactive shell
 #   that is *not* a login shell. Because of this behavior, this
@@ -149,6 +147,24 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 #####################################################################
 
 export GOPATH="$HOME"/Code/go:"$HOME"/Work/go
+
+##
+# AWS
+#####################################################################
+
+# Because, well shit.
+# Props to @jskidis, for never taking any [red]shit.
+function aws {
+    case $* in
+        redshit* )
+            shift 1;
+            command aws redshift "$@"
+        ;;
+        * )
+            command aws "$@"
+        ;;
+    esac
+}
 
 ##
 # Postgres
