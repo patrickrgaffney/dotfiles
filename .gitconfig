@@ -3,7 +3,6 @@
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
 #   @created    2016-09-17
-#   @modified   2017-11-17
 #
 #   The presence of this file overrides the system (--system) 
 #   defaults, located in /etc/gitconfig. The settings in this file
@@ -27,6 +26,7 @@
     br = branch
     up = rebase
     cm = commit
+    set = branch -u
     last = log -1 HEAD
     hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     undo = reset HEAD~
