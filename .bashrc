@@ -86,7 +86,7 @@ shopt -s xpg_echo
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/Code/go/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/code/go/bin
 
 # Set TextMate to be the default editor
 export EDITOR='subl'
@@ -150,7 +150,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # Go
 #####################################################################
 
-export GOPATH="$HOME"/Code/go:"$HOME"/Work/go
+export GOPATH="$HOME"/code/go:"$HOME"/work/go
 
 ##
 # AWS
