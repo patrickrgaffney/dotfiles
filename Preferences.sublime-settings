@@ -95,7 +95,7 @@
 		"coverage"
 	],
 	"font_fase": "Fira Mono",
-	"font_size": 15,
+	"font_size": 16,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
 	"gutter": true,
@@ -104,6 +104,7 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"SublimeLinter-gotype",
 		"Vintage"
 	],
 	"indent_guide_options":
