@@ -4,7 +4,6 @@
 # dotfiles.sh -- install dotfiles symlinks
 #
 #   author:     Pat Gaffney <pat@hypepat.com>
-#   created:    2016-09-17
 #
 #   This file creates symlinks for the dotfiles in the *current
 #   directory* to $HOME.

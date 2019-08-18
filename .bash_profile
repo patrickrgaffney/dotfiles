@@ -2,8 +2,6 @@
 # ~/.bash_profile -- startup file for bash (interactive login)
 #
 #	author:		Pat Gaffney <pat@hypepat.com>
-#	created:	2016-09-17
-#	modified:	2017-04-10
 #
 #	This file is loaded immediately after /etc/profile when invoking
 #	bash as an interactive login shell (or as a non-interactive

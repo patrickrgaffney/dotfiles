@@ -2,8 +2,6 @@
 # .hushlogin -- tell login to stfu
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
-#   @created    2016-09-18
-#   @modified   2016-09-18
 #
 #   The very *presence* of this file tells login(1) to forget about
 #   displaying the copyright notice, date and time of last login, 

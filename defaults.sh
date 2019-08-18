@@ -4,7 +4,6 @@
 # defaults.sh -- overwrite some macos defaults
 #
 #   author:     Pat Gaffney <pat@hypepat.com>
-#   created:    2019-06-02
 #
 #   Overwrite some of the macOS defaults.
 #

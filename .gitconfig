@@ -2,7 +2,6 @@
 # ~/.gitconfig -- user git configuration file
 #
 #   @author     Pat Gaffney <pat@hypepat.com>
-#   @created    2016-09-17
 #
 #   The presence of this file overrides the system (--system) 
 #   defaults, located in /etc/gitconfig. The settings in this file
