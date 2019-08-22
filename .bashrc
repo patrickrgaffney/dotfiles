@@ -153,6 +153,13 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export GOPATH="$HOME"/code/go:"$HOME"/work/go
 
 ##
+# Node
+#####################################################################
+
+# Print the top 15 largest NPM packages.
+alias npmsize="du -sh node_modules/* | sort -h -r | head -n 15"
+
+##
 # AWS
 #####################################################################
 
@@ -182,7 +189,8 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 #####################################################################
 
 function git_dirty {
-    local status=$(git status 2> /dev/null)
+    local status
+    status=$(git status 2> /dev/null)
     local push='Your branch is ahead'
     local dirty='added to commit'
     local commit='Changes to be committed'
@@ -203,9 +211,12 @@ function git_dirty {
 
 function git_branch {
     IFS=$'\n'
-    local branches=$(git branch --no-color 2> /dev/null)
+
+    local branches
+    branches=$(git branch --no-color 2> /dev/null)
     local prefix='\* '
     local string=''
+
     for branch in $branches; do
         if [[ ${branch} == ${prefix}* ]]; then 
             string+=':['
