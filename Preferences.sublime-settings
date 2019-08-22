@@ -81,7 +81,8 @@
 		"*.class",
 		"*.psd",
 		"*.db",
-		"*.sublime-workspace"
+		"*.sublime-workspace",
+		".eslintcache"
 	],
 	"find_selected_text": true,
 	"fold_buttons": true,
