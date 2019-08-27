@@ -93,7 +93,10 @@
 		".hg",
 		"CVS",
 		"node_modules",
-		"coverage"
+		"coverage",
+		".golangci-*",
+    ".golangcilint-*",
+    ".gometalinter-*"
 	],
 	"font_fase": "Fira Mono",
 	"font_size": 16,
