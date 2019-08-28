@@ -85,10 +85,10 @@ shopt -s xpg_echo
 # Environment Variables
 #####################################################################
 
-# Set the $PATH -- favor /usr/local/bin
+# Set the $PATH -- favor /usr/local/bin.
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/code/go/bin
 
-# Set TextMate to be the default editor
+# Set Sublime Text to be the default editor.
 export EDITOR='subl'
 
 # Ignore files with these suffixes when performing completion.
