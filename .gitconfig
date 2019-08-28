@@ -31,7 +31,7 @@
     undo = reset HEAD~
 
 [core]
-    editor = subl --wait --new-window
+    editor = subl --wait --stay
 
 [push]
     default = simple
