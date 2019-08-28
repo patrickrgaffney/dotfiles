@@ -104,8 +104,8 @@ export GLOBIGNORE='.DS_Store:*.o:*.pyc:.git:*cache'
 export HISTCONTROL='ignorespace:ignoredups'
 
 # Maximum number of lines/commands to save in the history file.
-export HISTFILESIZE=150
-export HISTSIZE=150
+export HISTFILESIZE=1000
+export HISTSIZE=1000
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8'
