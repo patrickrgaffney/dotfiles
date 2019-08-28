@@ -95,8 +95,8 @@
 		"node_modules",
 		"coverage",
 		".golangci-*",
-    ".golangcilint-*",
-    ".gometalinter-*"
+		".golangcilint-*",
+		".gometalinter-*"
 	],
 	"font_fase": "Fira Mono",
 	"font_size": 16,
