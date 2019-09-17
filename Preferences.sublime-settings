@@ -96,9 +96,10 @@
 		"coverage",
 		".golangci-*",
 		".golangcilint-*",
-		".gometalinter-*"
+		".gometalinter-*",
+		".terraform"
 	],
-	"font_fase": "Fira Mono",
+	"font_face": "Fira Mono",
 	"font_size": 16,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
