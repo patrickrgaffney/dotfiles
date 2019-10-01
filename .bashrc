@@ -28,7 +28,6 @@ set -o ignoreeof;
 # rather than before printing the next primary prompt.
 set -o notify;
 
-
 ##
 # Shell Behavior
 #####################################################################
@@ -79,7 +78,6 @@ shopt -s progcomp_alias
 
 # Make echo builtin expand backslash-escape-sequence.
 shopt -s xpg_echo
-
 
 ##
 # Environment Variables
@@ -151,6 +149,10 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 #####################################################################
 
 export GOPATH="$HOME/code/go"
+
+# Print the outdated go packages. This is intended to work with
+# go modules. It only prints patch and minor updates.
+alias goout="go list -u -m all"
 
 ##
 # Node
