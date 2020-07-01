@@ -137,6 +137,9 @@ export LESS_TERMCAP_ue=$(tput rmul; tput sgr0)
 export LESS_TERMCAP_mr=$(tput rev)
 export LESS_TERMCAP_mh=$(tput dim)
 
+# Correctly set GPG TTY.
+export GPG_TTY=$(tty)
+
 ##
 # Python
 #####################################################################
