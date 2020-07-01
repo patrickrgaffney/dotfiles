@@ -33,6 +33,7 @@
 
 [core]
     editor = subl --wait --stay
+    excludesfile = /Users/pat/.gitignore
 
 [push]
     default = simple
