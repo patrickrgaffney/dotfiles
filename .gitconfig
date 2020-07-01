@@ -38,6 +38,12 @@
 [push]
     default = simple
 
+[gpg]
+    program = gpg
+
+[commit]
+    gpgsign = true
+
 [branch]
     autosetuprebase = always
 
