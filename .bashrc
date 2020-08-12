@@ -87,7 +87,7 @@ shopt -s xpg_echo
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/code/go/bin
 
 # Set Sublime Text to be the default editor.
-export EDITOR='subl'
+export EDITOR='subl --wait --stay'
 
 # Ignore files with these suffixes when performing completion.
 export FIGNORE='.o:.pyc:.git:cache'
