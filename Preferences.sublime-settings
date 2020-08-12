@@ -104,7 +104,7 @@
 		".github"
 	],
 	"font_face": "Fira Mono",
-	"font_size": 23,
+	"font_size": 22,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
 	"gutter": true,
@@ -113,6 +113,7 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"Clang Format",
 		"SublimeLinter-golangcilint",
 		"SublimeLinter-gotype",
 		"Vintage",
