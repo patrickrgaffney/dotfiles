@@ -297,6 +297,9 @@ alias ...="cd ../../"
 # Open current directory in Finder.app.
 alias finder="open -a Finder ./"
 
+# Put the computer to sleep.
+alias nap="pmset sleepnow"
+
 ##
 # Private Configurations
 #####################################################################
