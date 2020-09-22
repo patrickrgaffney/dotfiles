@@ -97,7 +97,9 @@
 		".golangci-*",
 		".golangcilint-*",
 		".gometalinter-*",
-		".terraform"
+		".terraform",
+		".cache",
+		"dist"
 	],
 	"folder_include_patterns":
 	[
