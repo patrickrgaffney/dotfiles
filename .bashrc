@@ -305,3 +305,10 @@ alias nap="pmset sleepnow"
 #####################################################################
 
 [[ -s ~/.private ]] && source ~/.private
+
+##
+# Bash Completions
+#####################################################################
+
+# pass: Password Manager
+[[ -s /usr/local/etc/bash_completion.d/pass ]] && source /usr/local/etc/bash_completion.d/pass

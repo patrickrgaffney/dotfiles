@@ -13,7 +13,6 @@
 [user] 
     name = Pat Gaffney
     email = pat@hypepat.com
-    signingkey = C49DCBA1D82E5A09
 
 # Include my Work-specific .gitconfig
 [includeIf "gitdir:~/work/**"]

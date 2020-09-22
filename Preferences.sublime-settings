@@ -101,12 +101,8 @@
 		".cache",
 		"dist"
 	],
-	"folder_include_patterns":
-	[
-		".github"
-	],
 	"font_face": "Fira Mono",
-	"font_size": 20,
+	"font_size": 23,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
 	"gutter": true,
