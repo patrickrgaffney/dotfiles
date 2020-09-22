@@ -106,7 +106,7 @@
 		".github"
 	],
 	"font_face": "Fira Mono",
-	"font_size": 22,
+	"font_size": 20,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
 	"gutter": true,
