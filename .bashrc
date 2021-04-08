@@ -239,6 +239,23 @@ function git_branch {
     unset IFS
 }
 
+function k8s_cluster {
+    local cluster
+    local string
+    cluster=$(kubectl config current-context)
+
+    if [[ ${cluster} == "" ]]; then 
+        echo ""
+    else
+        string+=':('
+        string+=$'\e[1;33m'
+        string+="$cluster"
+        string+=$'\e[0m'
+        string+=')'
+        echo "$string"
+    fi
+}
+
 # Begin appending information to PS1
 export PS1=''
 
@@ -249,10 +266,13 @@ PS1+=$'\[\e[1;36m\]\#.\[\e[0m\] '
 PS1+=$'\[\e[1m\]\u\[\e[0m\]'
 
 # Add bold-blue hostname: '\h'
-PS1+=$'\[\e[1;34m\]@\h\[\e[0m\] in '
+PS1+=$'\[\e[1;34m\]@\h\[\e[0m\]'
+
+# Add current k8s cluster.
+PS1+='$(k8s_cluster) '
 
 # Add red working directory: '\w'
-PS1+=$'\[\e[1;31m\]\w\[\e[0m\]'
+PS1+=$'in \[\e[1;31m\]\w\[\e[0m\]'
 
 # Add git information
 PS1+='$(git_branch) '
