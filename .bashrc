@@ -333,6 +333,3 @@ alias nap="pmset sleepnow"
 # Set up bash_completion.
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-# pass: Password Manager
-[[ -s /usr/local/etc/bash_completion.d/pass ]] && source /usr/local/etc/bash_completion.d/pass
