@@ -245,9 +245,9 @@ function git_branch {
 function k8s_cluster {
     local cluster
     local string
-    cluster=$(kubectl config current-context)
+    cluster=$(kubectl config current-context 2>/dev/null)
 
-    if [[ ${cluster} == "" ]]; then 
+    if [[ ${cluster} == "" || "$?" == "1" ]]; then
         echo ""
     else
         string+=':('
