@@ -7,6 +7,12 @@
 ```
 
 - `homebrew` will install the dev-tools for macos.
+- We will also need to install [Rosetta](https://developer.apple.com/documentation/apple-silicon/about-the-rosetta-translation-environment) in order to run Intel based crap on Apple Silicon:
+
+```sh
+sudo softwareupdate --install-rosetta
+```
+
 - Install `homebrew` casks:
 
 ```sh
