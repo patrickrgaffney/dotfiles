@@ -10,6 +10,9 @@
 #
 #####################################################################
 
+# Include dotfiles when looping.
+shopt -s dotglob
+
 # Symlink all the dotfiles.
 # ln -s :: create symbolic link
 # ln -v :: verbose mode- print details
