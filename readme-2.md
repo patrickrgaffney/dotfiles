@@ -90,3 +90,16 @@ gpg --export-secret-keys "$ID" > private.key
 # New machine: import key(s):
 gpg --import private.key
 ```
+
+- Clone `pass` repository.
+
+```sh
+# Initialize password store.
+pass init "$GPG_ID"
+
+# Initialize empty git repo.
+pass git init
+
+# Close existing pass repo.
+pass git clone "$PASS_GIT_URL"
+```
