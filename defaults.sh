@@ -10,7 +10,7 @@
 #####################################################################
 
 # Move the location for screenshots to ~/Downloads.
-defaults write com.apple.screencapture location "/Users/$USER/Downloads"
+# defaults write com.apple.screencapture location "/Users/$USER/Downloads"
 
 # Restart UI server.
-killall SystemUIServer
+# killall SystemUIServer
