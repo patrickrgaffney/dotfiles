@@ -143,6 +143,9 @@ export LESS_TERMCAP_mh=$(tput dim)
 # Correctly set GPG TTY.
 export GPG_TTY=$(tty)
 
+# Turn off the homebrew hints.
+export HOMEBREW_NO_ENV_HINTS='why'
+
 ##
 # Python
 #####################################################################
