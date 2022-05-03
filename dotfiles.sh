@@ -46,4 +46,4 @@ done
 ln -sv "$PWD/iterm-profiles.json" "$HOME/Library/Application Support/iTerm2/DynamicProfiles"
 
 # Create the symlink for the Sublime Text preferences.
-ln -sv "$PWD/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text 3/Packages/User"
+ln -sv "$PWD/Preferences.sublime-settings" "$HOME/Library/Application Support/Sublime Text/Packages/User"
