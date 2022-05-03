@@ -29,6 +29,8 @@ brew install --cask slack
 brew install --cask soulver
 brew install --cask rectangle
 brew install --cask tableplus
+# MS Teams requires rosetta.
+brew install --cask microsoft-teams
 ```
 
 - Install `homebrew` packages:
