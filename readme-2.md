@@ -76,3 +76,17 @@ echo "/opt/homebrew/bin/bash" >> /etc/shells
 ```sh
 chsh -s /opt/homebrew/bin/bash
 ```
+
+- Move SSH keys over. Typically I move the entire `$HOME/.ssh` folder, then `rm known_hosts`.
+- Move GPG keys over:
+
+```sh
+# Old machine: grap the ID of the key(s):
+gpg --list-secret-keys user@example.com
+
+# Old machine: export key(s):
+gpg --export-secret-keys "$ID" > private.key
+
+# New machine: import key(s):
+gpg --import private.key
+```
