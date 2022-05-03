@@ -84,7 +84,7 @@ shopt -s xpg_echo
 #####################################################################
 
 # Set the $PATH -- favor /usr/local/bin.
-export PATH="$(brew --prefix)/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/code/go/bin"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt:$HOME/code/go/bin"
 
 # Set Sublime Text to be the default editor.
 export EDITOR='subl --wait --stay'
@@ -334,5 +334,16 @@ alias nap="pmset sleepnow"
 #####################################################################
 
 # Set up bash_completion.
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if type brew &>/dev/null; then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+
+  # Use homebrew script to source all completions.
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  # Manually source all completions.
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*; do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+  fi
+fi
