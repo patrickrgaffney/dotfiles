@@ -171,6 +171,15 @@ alias goout="go list -u -m all"
 alias npmsize="du -sh node_modules/* | sort -h -r | head -n 15"
 
 ##
+# Kubernetes
+#####################################################################
+
+# Decode and print a secret.
+function k8secret {
+    kubectl get secret "$1" -o json | jq -r '.data | to_entries[] | "\(.key) = \(.value | @base64d)"'
+}
+
+##
 # AWS
 #####################################################################
 
