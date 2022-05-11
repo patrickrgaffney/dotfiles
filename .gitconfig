@@ -52,3 +52,7 @@
 
 [init]
 	defaultBranch = main
+
+# Required for pulling down private go modules.
+[url "ssh://git@github.com/"]
+    insteadOf = https://github.com/
