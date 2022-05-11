@@ -209,7 +209,7 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 #####################################################################
 
 # Color the Git branch name based on the status.
-function _git_dirty {
+function prompt_git_dirty {
     local status
     status=$(git status 2> /dev/null)
     local push='Your branch is ahead'
@@ -231,7 +231,7 @@ function _git_dirty {
 }
 
 # Add the Git branch `:[<branch-name>]` to the prompt.
-function _git_branch {
+function prompt_git_branch {
     IFS=$'\n'
 
     local branches
@@ -242,7 +242,7 @@ function _git_branch {
     for branch in $branches; do
         if [[ ${branch} == ${prefix}* ]]; then 
             string+=':['
-            string+=$(_git_dirty)
+            string+=$(prompt_git_dirty)
             string+=${branch##$prefix}
             string+=$'\e[0m'
             string+=']'
@@ -254,7 +254,7 @@ function _git_branch {
 }
 
 # Add Kubernetes cluster name `:(<cluster-name>)` to prompt.
-function _k8s_cluster {
+function prompt_k8s_cluster {
     local cluster
     local string
     cluster=$(kubectl config current-context 2>/dev/null)
@@ -284,13 +284,13 @@ PS1+=$'\[\e[1m\]\u\[\e[0m\]'
 PS1+=$'\[\e[1;34m\]@\h\[\e[0m\]'
 
 # Add current k8s cluster.
-PS1+='$(_k8s_cluster) '
+PS1+='$(prompt_k8s_cluster) '
 
 # Add red working directory: '\w'
 PS1+=$'in \[\e[1;31m\]\w\[\e[0m\]'
 
 # Add git information
-PS1+='$(_git_branch) '
+PS1+='$(prompt_git_branch) '
 
 # Add magenta time: '\A'
 PS1+=$'at \[\e[1;35m\]\A\[\e[0m\]\n'
