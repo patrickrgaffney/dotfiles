@@ -38,6 +38,8 @@ for file in *; do
         printf "dotfiles.sh: Skipping \'%s\' -- it is an iTerm2 color file\n" "$file"
     elif [[ $file == *.json ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is a JSON file\n" "$file"
+    elif [[ $file == *.sublime-settings ]]; then
+        printf "dotfiles.sh: Skipping \'%s\' -- it is a Sublime file\n" "$file"
     else ln -sv "$PWD/$file" "$HOME";
     fi
 done
