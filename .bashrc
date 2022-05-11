@@ -359,3 +359,10 @@ if type brew &>/dev/null; then
     done
   fi
 fi
+
+# Set up any custom completions.
+if [ -d "$HOME/.completions" ]; then
+    for COMPLETION in "$HOME/.completions/"*; do
+        [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
+fi
