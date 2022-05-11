@@ -13,17 +13,21 @@
 # Include dotfiles when looping.
 shopt -s dotglob
 
+# Create the $HOME/.completions directory if it does not exist.
+mkdir -p "$HOME/.completions"
+
 # Symlink all the dotfiles.
 # ln -s :: create symbolic link
 # ln -v :: verbose mode- print details
 
 echo $'\e[1;34mInstalling symlinks:\e[0m'
 
-# Create a symlink for each appropriate file
-# in this directory to $HOME.
+# Create a symlink for each appropriate dotfile to $HOME.
 for file in *; do
     if [[ -d $file ]]; then 
         printf "dotfiles.sh: Skipping \'%s\' -- it is a directory\n" "$file"
+    elif [[ -x $file && $file == *"completion.bash" ]]; then
+        ln -sv "$PWD/$file" "$HOME/.completions";
     elif [[ -x $file ]]; then
         printf "dotfiles.sh: Skipping \'%s\' -- it is an executable\n" "$file"
     elif [[ $file == *.png ]]; then
