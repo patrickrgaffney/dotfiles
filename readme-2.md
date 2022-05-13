@@ -31,6 +31,7 @@ brew install --cask rectangle
 brew install --cask tableplus
 # MS Teams requires rosetta.
 brew install --cask microsoft-teams
+brew install --cask rancher
 ```
 
 - Install `homebrew` packages:
