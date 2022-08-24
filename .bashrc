@@ -335,6 +335,9 @@ alias finder="open -a Finder ./"
 # Put the computer to sleep.
 alias nap="pmset sleepnow"
 
+# Get the day of the year as in DDD.
+alias doy='date +%j'
+
 ##
 # Private Configurations
 #####################################################################
