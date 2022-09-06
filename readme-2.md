@@ -32,6 +32,9 @@ brew install --cask tableplus
 # MS Teams requires rosetta.
 brew install --cask microsoft-teams
 brew install --cask rancher
+brew install --cask iina
+brew install --cask subler
+brew install --cask handbrake
 ```
 
 - Install `homebrew` packages:
@@ -54,6 +57,8 @@ brew install postgresql
 brew install shellcheck
 brew install staticcheck
 brew install terraform
+brew install ffmpeg
+brew install youtube-dl
 ```
 
 - Set up OpenJDK as the system Java wrapper:
