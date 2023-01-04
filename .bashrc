@@ -179,6 +179,9 @@ function k8secret {
     kubectl get secret "$1" -o json | jq -r '.data | to_entries[] | "\(.key) = \(.value | @base64d)"'
 }
 
+# Set up color diffs.
+export KUBECTL_EXTERNAL_DIFF="colordiff -N -u"
+
 ##
 # AWS
 #####################################################################

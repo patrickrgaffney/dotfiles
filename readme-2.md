@@ -59,6 +59,7 @@ brew install staticcheck
 brew install terraform
 brew install ffmpeg
 brew install youtube-dl
+brew install colordiff
 ```
 
 - Set up OpenJDK as the system Java wrapper:
