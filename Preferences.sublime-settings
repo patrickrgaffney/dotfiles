@@ -102,7 +102,7 @@
 		"dist"
 	],
 	"font_face": "Fira Mono",
-	"font_size": 18,
+	"font_size": 19,
 	"git_diff_target": "index",
 	"gpu_window_buffer": "auto",
 	"gutter": true,
