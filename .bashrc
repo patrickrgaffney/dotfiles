@@ -216,6 +216,11 @@ function todoy {
     date -j -f '%Y-%m-%d' "$1" '+%Y%j'
 }
 
+# Convert YYYYDDD to YYYY-MM-DD.
+function fromdoy {
+    date -j -f '%Y%j' "$1" '+%Y-%m-%d'
+}
+
 ##
 # Prompt
 #####################################################################
